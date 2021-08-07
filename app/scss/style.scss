@@ -1,0 +1,63 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+
+/* .deg{
+  animation: deg 15s linear  infinite ;
+  transform-origin: center;
+}
+@keyframes deg{
+  to{
+    transform: rotate(360deg);
+  }
+} 
+.abc{
+  animation: abc 15s linear  infinite ;
+  transform-origin: center;
+}
+
+@keyframes abc{
+  to{
+    transform: rotate(360deg);
+  }
+}  */
+
+/* 
+.abc{
+  --animate-duration: 3.5s;
+}
+ .circle{
+  stroke-dasharray: 295;
+  stroke-dashoffset: 0;
+  animation: animdash 60s linear 2s infinite ;
+}
+
+
+@keyframes animdash{
+  to{
+    stroke-dasharray: 295;
+    stroke-dashoffset: 885;
+  }
+} 
+
+.payse{
+  transform-origin: center;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'media';
