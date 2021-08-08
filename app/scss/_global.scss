@@ -1,0 +1,50 @@
+
+body{
+  color: $default;
+  @extend %montserrat-400;
+  font-size: 18px;
+  line-height: 31px;
+  position: relative;
+}
+
+.container{
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.title{
+  color: $title;
+  text-transform: capitalize;
+  font-size: 44px;
+  line-height: 53px;
+  @extend %open-600;
+}
+
+.subtitle{
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $default;
+  @extend %montserrat-700;
+  display: inline-block;
+  padding: 3px 15px;
+  position: relative;
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 22px;
+    background-image: url('../images/decor/subtitile.svg');
+    background-repeat: no-repeat;
+  }
+  &::before{
+    left: 0;
+    transform: rotate(180deg);
+  }
+  &::after{
+    right: 0;
+  }
+}
