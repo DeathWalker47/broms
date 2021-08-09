@@ -36,6 +36,27 @@ $default: #9CA7B8;
   font-weight: 800;
 }
 
+
+%btn{
+  background: rgba(3, 3, 4, 0.5);
+  display: inline-block;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  @extend %montserrat-800;
+  padding: 15px 35px;
+  color: rgba($title, .8);
+  cursor: pointer;
+  transition:  all .3s linear;
+  &:hover{
+  background: rgba(3, 3, 4, 1);
+  }
+}
+
+
+
 @function max($numbers...) {
  @return m#{a}x(#{$numbers});
 }

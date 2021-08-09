@@ -12,6 +12,19 @@ $(function(){
     prevArrow: '<button type="button" class="slick-prev"><img src="images/decor/left-arrow.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="images/decor/right-arrow.svg" alt=""></button>',
   });
+
   AOS.init();
+
+  $('.images-slider').slick({
+    infinite: false,
+    speed: 800,
+    cssEase: 'linear',
+    /* arrows: false, */
+    slidesToShow:2,
+    slidesToScroll:1,
+    adaptiveHeight: true,
+    variableWidth: true,
+  });
+  
 });
 
