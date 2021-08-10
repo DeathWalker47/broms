@@ -15,9 +15,20 @@ $(function(){
 
   AOS.init();
 
+  $('.slider-examples').slick({
+    infinite: true,
+    cssEase: 'linear',
+    /* arrows: false, */
+    prevArrow: '<button type="button" class="slick-prev"><img src="images/decor/left-litlearrow.svg" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="images/decor/right-litlearrow.svg" alt=""></button>',
+    slidesToShow:1,
+    slidesToScroll:1,
+    speed: 1000,
+  });
+
   $('.images-slider').slick({
-    infinite: false,
-    speed: 800,
+    infinite: true,
+    speed: 400,//400
     cssEase: 'linear',
     /* arrows: false, */
     slidesToShow:2,
@@ -25,6 +36,28 @@ $(function(){
     adaptiveHeight: true,
     variableWidth: true,
   });
+
+  $('.circle-1').circleProgress({
+    value: 0.85,
+    fill: '#8AAEE5',
+    size:105,
+    animation: {
+        duration: 1200,
+        easing: 'linear',
+      },
+    emptyFill: 'rgba(0, 0, 0, 1)',
+    });
+    
+    const myChart = $(".circle-2").donutty({
   
+    });
+
+    $(".example").circlos({
+      backgroundColor:'#fff',
+          progressColor:'#fff',
+          percent: 75,
+          duration: 2000
+    });
 });
+
 
