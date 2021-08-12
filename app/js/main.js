@@ -38,6 +38,41 @@ $(function(){
   });
 
 
+  $('.team-slider').slick({
+    infinite: true,
+    cssEase: 'linear',
+    /* arrows: false, */
+    prevArrow: '<button type="button" class="slick-prev"><img src="images/decor/left-litlearrow.svg" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="images/decor/right-litlearrow.svg" alt=""></button>',
+    slidesToShow:4,
+    slidesToScroll:1,
+    speed: 700,
+  });
+
+  $('.reviews__text-slider').slick({
+    infinite: true,
+    speed: 600,//400
+    cssEase: 'linear',
+    arrows: false,
+    slidesToShow:1,
+    slidesToScroll:1,
+    fade: true,
+    asNavFor: '.reviews-slider'
+  });
+
+  $('.reviews-slider').slick({
+    infinite: true,
+    speed: 600,//400
+    cssEase: 'linear',
+    arrows: false,
+    slidesToShow:5,
+    slidesToScroll:1,
+    adaptiveHeight: true,
+    variableWidth: true,
+    centerMode: true,
+    asNavFor: '.reviews__text-slider'
+  });
+
 });
 
 

@@ -821,6 +821,112 @@
   }
 }
 
+
+.team{
+  padding-bottom: 215px;
+  &__top{
+    text-align: center;
+  }
+  &__subtitle{
+    margin-bottom: 20px;
+  }
+  &__title{
+    margin-bottom: 60px;
+  }
+}
+
+.team-slider{
+  margin: 0 200px;
+  &__item{
+    max-width: 360px;
+    position: relative;
+    /* padding: 0 15px; */
+    z-index: 1;
+    &::before{
+      position: absolute;
+      content: '';
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 80%;
+      background: linear-gradient(180deg, rgba(16, 18, 21, 0) 0%, rgba(3, 3, 4, 0.6) 100%);
+    }
+    picture{
+      source,
+      img{
+        width: 360px;
+        height: 460px;
+        object-fit: cover;
+        display: inline;
+      }
+    }
+  }
+  .slick-arrow{
+    position: absolute;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    bottom: -55px;
+    opacity: .5;
+  }
+  .slick-prev{
+    left: 47%;;
+  }
+  .slick-next{
+    left: 53%;
+  }
+ /*  .slick-slide:not(.slick-current){
+    max-width: 190px;
+    .team-slider__item{
+    max-width: 190px;
+      margin-top: 30px;
+      picture{
+        source,
+        img{
+          width: 190px;
+          height: 330px;
+          object-fit: cover;
+        }
+      }
+    }
+  } */
+/*   .slick-current{
+        height: 460px;
+        width: 100%;
+    .team-slider__item{
+      max-width: 360px;
+      width: 100%;
+        height: 460px;
+       picture{
+      source,
+      img{
+        width: 360px;
+        height: 460px;
+        object-fit: cover;
+      }
+    }
+    }
+  } */
+  &__box{
+    position: absolute;
+    left: 20px;
+    bottom: -30px;
+    right: 20px;
+  }
+  &__title-name{
+    font-size: 24px;
+    line-height: 29px;
+  }
+  &__profession{
+    font-size: 16px;
+    line-height: 27px;
+  }
+  .slick-list {
+    padding-bottom: 30px;
+  }
+}
+
+
 .about-us{
   padding-bottom: 130px;
   &__inner{
@@ -888,6 +994,110 @@
       background: rgba(17, 19, 25, 0.5);
       z-index: -1;
     }
+  }
+}
+
+.reviews{
+  padding: 100px 0;
+  z-index: 1;
+  background-color: rgba(23, 24, 24, 1);
+  margin-bottom: 120px;
+  min-height: 600px;
+  position: relative;
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    right: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &::before{
+    background: linear-gradient(180deg, rgba(3, 4, 4, 0) 0%, #030404 100%);
+    bottom: 0;
+    top: 80%;
+  }
+  &::after{
+    background: linear-gradient(360deg, rgba(3, 4, 4, 0) 0%, #030404 100%);
+    top: 0;
+    bottom: 80%;
+  }
+  &__top{
+    text-align: center;
+  }
+  &__subtitle{
+    margin-bottom: 20px;
+  }
+  &__title{
+    margin-bottom: 30px;
+  }
+  &__text{
+    margin-bottom: 50px;
+  }
+}
+
+.reviews-slider{
+  max-width: 600px;//пока так,пока не уменьшил размер иконок.а так 460пх
+  margin: 0 auto;
+  &__item{
+    width: 150px;
+    opacity: .3;
+    position: relative;
+    transition: all .3s linear;
+    margin-top: 15px;
+    padding: 0 18px;
+  }
+  &__img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 10px;
+    transition: all .3s linear;
+  }
+  &__name{
+    color: $title;
+    font-size: 12px;
+    line-height: 170%;
+    text-transform: uppercase;
+    @extend %montserrat-700;
+    /* opacity: 0; */
+    display: none;
+    transition: all .3s linear;
+  }
+  .slick-slide,
+  .slick-track{
+    transition: all .3s linear;
+  }
+  .slick-current{
+    .reviews-slider__item{
+      margin-top: 0;
+      opacity: 1;
+      width: 150px;
+    }
+    .reviews-slider__img{
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 10px;
+    }
+    .reviews-slider__name{
+      /* opacity: 1; */
+      display: block;
+    }
+  }
+  .slick-arrow{
+    background-color: transparent;
+    font-size: 0;
+    border: none;
+    position: absolute;
+    right: 32%;
+    top: 100%;
+  }
+  .slick-next{
+  }
+  .slick-prev{
+    left: 32%;
   }
 }
 
@@ -1117,8 +1327,276 @@
   }
 }
 
+.contact{
+  padding-bottom: 120px;
+  z-index: 1;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    top: 0;
+    right: 0;
+    background: #0649CA;
+    opacity: 0.08;
+    filter: blur(250px);
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    max-width: 530px;
+  }
+  &__title{
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+  &__text{
+    margin-bottom: 60px;
+  }
+  &__box{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__box-item{
+    width: 190px;
+    padding-left: 55px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45px;
+      height: 45px;
+    }
+    &:nth-child(1)::before{
+      background-image: url('../images/icons/phone.svg');
+      
+    }
+    &:nth-child(2n){
+      margin-right: 0;
+      &::before{
+        background-image: url('../images/icons/marker.svg');
+      }
+    }
+    &:nth-child(3)::before{
+      background-image: url('../images/icons/email.svg');
+      
+    }
+  }
+  &__box-item{
+    a,
+    p{
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &__box-title{
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
 
+.contact-form{
+  width: 430px;
+  margin-top: 60px;
+  &__title{
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 30px;
+  }
+  &__input,
+  &__textarea{
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    padding: 12px 30px;
+    display: block;
+    margin-bottom: 20px;
+    max-width: 430px;
+    width: 100%;
+    border-radius: 50px;
+    color: $default;
+    outline: none;
+    &::placeholder{
+      color: $default;
+    }
+    &:focus{
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      &::placeholder{
+        color: transparent;
+      }
+    }
+  }
+  &__textarea{
+    height: 100px;
+    resize: none;
+    border-radius: 25px;
+  }
+  &__btn{
+    @extend %btn;
+  }
+}
 
-
+.footer{
+  z-index: 1;
+  position: relative;
+  &__inner{
+    display: flex;
+  }
+  &__item{
+    max-width: 640px;
+    padding: 60px;
+    background-color: #0B0D0E;
+    &:nth-child(2){
+      background-color: #101215;
+    }
+  }
+  &__item-title{
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 20px;
+  }
+  &__text{
+    margin-bottom: 40px;
+  }
+  ul.top__social-list{
+    display: flex;
+  }
+  .top__social-item{
+    padding: 0 23px;
+    &:first-child{
+      padding-left: 0;
+    }
+    &:nth-child(2)::before {
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+    &:nth-child(2)::after {
+      top: 50%;
+      transform: translateY(-50%);
+      left: auto;
+      right: 0;
+    }
+  }
+  &__form-input{
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    padding: 12px 30px;
+    max-width: 355px;
+    border-radius: 50px;
+    color: $default;
+    outline: none;
+    margin-right: 15px;
+    &::placeholder{
+      color: $default;
+    }
+    &:focus{
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      &::placeholder{
+        color: transparent;
+      }
+    }
+  }
+  &__form-btn{
+    @extend %btn;
+  }
+  &__contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__contact-item{
+    width: 200px;
+    margin-right: 60px;
+    margin-bottom: 10px;
+    padding-left: 35px;
+    position: relative;
+    &:first-child{
+      &::before{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 7px;
+        left: 0;
+        background-repeat: no-repeat;
+        background-image: url('../images/icons/mini-mail.svg');
+      }
+    }
+    &:last-child{
+      &::before{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 30px;
+        left: 0;
+        top: 0;
+        background-image: url('../images/icons/mini-marker.svg');
+      }
+    }
+  }
+  &__contact-link:last-child{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 7px;
+      left: -35px;
+      background-repeat: no-repeat;
+      background-image: url('../images/icons/mini-phone.svg');
+    }
+  }
+  &__contact-link,
+  &__contact-address{
+    font-size: 16px;
+    line-height: 27px;
+    color: $title;
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__bottom{
+    background-color: $bg;
+    padding: 25px 60px;
+  }
+  &__bottom-inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bottom-copy,
+  &__bottom-link{
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__bottom-link{
+    padding-right: 25px;
+    display: inline-block;
+    position: relative;
+    &:first-child{
+      &::before{
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 1px;
+        background-color: $default;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+    &:last-child{
+      padding-right: 0;
+      padding-left: 20px;
+    }
+  }
+}
 
 @import 'media';
