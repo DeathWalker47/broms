@@ -28,7 +28,7 @@ $(function(){
 
   $('.images-slider').slick({
     infinite: true,
-    speed: 400,//400
+    speed: 500,//400
     cssEase: 'linear',
     /* arrows: false, */
     slidesToShow:2,
@@ -72,6 +72,9 @@ $(function(){
     centerMode: true,
     asNavFor: '.reviews__text-slider'
   });
+
+
+  lightGallery(document.getElementById('gallery'));
 
 });
 

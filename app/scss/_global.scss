@@ -1,4 +1,9 @@
 
+html,
+body{
+  min-height: 100%;
+}
+
 body{
   color: $default;
   @extend %montserrat-400;
@@ -8,10 +13,17 @@ body{
 }
 
 .wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
   max-width: 1920px;
   margin: 0 auto;
   background-color: $bg;
+}
+
+.main{
+  flex-grow: 1;
 }
 
 .container{
@@ -53,5 +65,40 @@ body{
   }
   &::after{
     right: 0;
+  }
+}
+
+.breadcrumbs{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    font-size: 16px;
+    line-height: 27px;
+    color: $title;
+    opacity: .5;
+    @extend %open-700;
+    padding-right: 45px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      width: 5px;
+      height: 2px;
+      background-color: rgba($color: $title, $alpha: 0.5);
+    }
+    &:last-child{
+      padding-right: 0;
+      &::before{
+        display: none;
+      }
+    }
   }
 }
