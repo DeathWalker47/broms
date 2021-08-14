@@ -51,12 +51,14 @@ $(function(){
 
   $('.reviews__text-slider').slick({
     infinite: true,
-    speed: 600,//400
+    speed: 700,//400
     cssEase: 'linear',
     arrows: false,
     slidesToShow:1,
     slidesToScroll:1,
     fade: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
     asNavFor: '.reviews-slider'
   });
 
