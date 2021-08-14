@@ -49,7 +49,7 @@ $(function(){
     speed: 700,
   });
 
-  $('.reviews__text-slider').slick({
+  $('.reviews-block__text-slider').slick({
     infinite: true,
     speed: 700,//400
     cssEase: 'linear',
