@@ -1,4 +1,13 @@
 $(function(){
+
+    $(".menu__list-link").on("click", function (e) {
+        e.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+        
+
   $('.top-slider').slick({
     infinite: true,
     dots: true,
@@ -72,7 +81,7 @@ $(function(){
     adaptiveHeight: true,
     variableWidth: true,
     centerMode: true,
-    asNavFor: '.reviews__text-slider'
+    asNavFor: '.reviews-block__text-slider'
   });
 
 
