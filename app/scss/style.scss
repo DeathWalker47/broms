@@ -843,7 +843,8 @@
 .team-slider{
   margin: 0 200px;
   &__item{
-    max-width: 360px;
+    width: 360px;
+    width: 100%;
     position: relative;
     /* padding: 0 15px; */
     z-index: 1;
@@ -866,6 +867,7 @@
       }
     }
   }
+
   .slick-arrow{
     position: absolute;
     background-color: transparent;
@@ -881,38 +883,7 @@
   .slick-next{
     left: 53%;
   }
- /*  .slick-slide:not(.slick-current){
-    max-width: 190px;
-    .team-slider__item{
-    max-width: 190px;
-      margin-top: 30px;
-      picture{
-        source,
-        img{
-          width: 190px;
-          height: 330px;
-          object-fit: cover;
-        }
-      }
-    }
-  } */
-/*   .slick-current{
-        height: 460px;
-        width: 100%;
-    .team-slider__item{
-      max-width: 360px;
-      width: 100%;
-        height: 460px;
-       picture{
-      source,
-      img{
-        width: 360px;
-        height: 460px;
-        object-fit: cover;
-      }
-    }
-    }
-  } */
+
   &__box{
     position: absolute;
     left: 20px;
@@ -1044,7 +1015,7 @@
 }
 
 .reviews-slider{
-  max-width: 600px;//пока так,пока не уменьшил размер иконок.а так 460пх
+  max-width: 650px;//пока так,пока не уменьшил размер иконок.а так 460пх
   margin: 0 auto;
   &__item{
     width: 150px;
@@ -1053,6 +1024,7 @@
     transition: all .3s linear;
     margin-top: 15px;
     padding: 0 18px;
+    text-align: center;
   }
   &__img{
     width: 70px;
@@ -1068,8 +1040,8 @@
     line-height: 170%;
     text-transform: uppercase;
     @extend %montserrat-700;
-    /* opacity: 0; */
-    display: none;
+    opacity: 0;
+    max-width: 100px;
     transition: all .3s linear;
   }
   .slick-slide,
@@ -1088,8 +1060,8 @@
       margin: 0 auto 10px;
     }
     .reviews-slider__name{
-      /* opacity: 1; */
-      display: block;
+      opacity: 1;
+      
     }
   }
   .slick-arrow{

@@ -54,8 +54,8 @@ $(function(){
     prevArrow: '<button type="button" class="slick-prev"><img src="images/decor/left-litlearrow.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="images/decor/right-litlearrow.svg" alt=""></button>',
     slidesToShow:4,
-    slidesToScroll:1,
-    speed: 700,
+    slidesToScroll:2,
+    speed: 1000,
   });
 
   $('.reviews-block__text-slider').slick({
