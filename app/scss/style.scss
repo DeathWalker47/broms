@@ -1915,4 +1915,203 @@
   }
 }
 
+.booking{
+  padding: 200px 0;
+  z-index: 3;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 1000px;
+    background: #0649CA;
+    opacity: 0.05;
+    filter: blur(200px);
+    z-index: -1;
+  }
+  &__top{
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  &__title{
+    font-size: 28px;
+    line-height: 37px;
+    margin-bottom: 20px;
+  }
+  &__text{
+    margin-bottom: 30px;
+  }
+}
+
+.booking-calendar{
+  max-width: 1150px;
+  margin: 0 auto;
+  position: relative;
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+  &::before{
+    width: 1000px;
+    height: 1000px;
+    background: #0649CA;
+    opacity: 0.05;
+    filter: blur(200px);
+    filter: blur(200px);
+    bottom: -21%;
+    right: -34%;
+  }
+  &::after{
+    width: 400px;
+    height: 400px;
+    bottom: 5%;
+    right: -44%;
+    transform: rotate(-45deg);
+    background-image: url('../images/decor/circle.svg');
+    background-repeat: no-repeat;
+  }
+  &__month{
+    text-align: center;
+    padding: 40px;
+    background-color: #0B0D0E;
+    p{
+      color: $title;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 24px;
+      @extend %montserrat-700;
+    }
+  }
+  &__week{
+    background-color: #101215;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__day{
+    display: inline-block;
+    padding: 14px 67px;
+    text-align: center; 
+  }
+  &__date{
+    background-color: #030404;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__label{
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  &__input{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0,0,0,0);
+  }
+  &__checkbox{
+    color: $title;
+    height: 162px;
+    width: 162px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__input:disabled{
+    & + .booking-calendar__checkbox{
+      opacity: .15;
+    }
+  }
+  &__input:checked{
+    & + .booking-calendar__checkbox{
+      background-color: #0B0D0E;
+    }
+  }
+}
+.popup-overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color: #000000, $alpha: .4);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.booking-box{
+  display: none;
+  z-index: 19;
+  padding: 35px 90px;
+  width: 100%;
+  background-color: #0B0D0E;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1150px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  &__close{
+    margin-left: auto;
+    font-size: 50px;
+    cursor: pointer;
+    color: $title;
+    display: inline-block;
+    position: absolute;
+    top: 6%;
+    right: 2%;
+  }
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px;
+    &:nth-child(3){
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+  }
+  &__box-time{
+    padding-left: 40px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background-image: url('../images/icons/clock.svg');
+      background-repeat: no-repeat;
+    }
+  }
+  &__time{
+    display: block;
+    font-size: 16px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: $title;
+    @extend %montserrat-700;
+  }
+  &__place{
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__btn-box{
+    padding-right: 55px;
+  }
+  &__btn{
+    @extend %btn;
+  }
+}
+
+
+
+
 @import 'media';

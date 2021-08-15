@@ -1,5 +1,17 @@
 $(function(){
 
+    $('.booking-calendar__input').on('click', function(){
+        $('.popup-overlay').fadeIn();
+        $('.booking-box').fadeIn();
+      });
+    
+      $('.booking-box__close, .popup-overlay').on('click', function(){
+        $('.popup-overlay').fadeOut();
+        $('.booking-box').fadeOut();
+      });
+
+
+
     $(".menu__list-link").on("click", function (e) {
         e.preventDefault();
         var id  = $(this).attr('href'),
