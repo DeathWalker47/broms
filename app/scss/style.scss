@@ -51,6 +51,9 @@
       }
     }
   }
+  &__dropdawn-error{
+    display: none;
+  }
   &__list-link,
   &__list-home,
   &__link-block,
@@ -2111,6 +2114,40 @@
   }
 }
 
+.error{
+  padding: 60px 0 230px;
+  /* background-color: #1C2127; */
+  z-index: 1;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+    background: #0649CA;
+    opacity: 0.1;
+    filter: blur(200px);
+    z-index: -1;
+    width: 500px;
+    height: 500px;
+  }
+  &__content{
+    max-width: 760px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  &__title{
+    font-size: 120px;
+    line-height: 144px;
+    margin-bottom: 25px;
+  }
+  &__subtitle{
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 25px;
+    display: block;
+  }
+}
 
 
 
