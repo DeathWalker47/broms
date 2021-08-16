@@ -131,4 +131,23 @@ body{
     font-size: 10px;
     padding: 3px 13px;
   }
+  .title{
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .input,
+.textarea{
+  &::placeholder{
+    color: $default;
+    font-size: 15px;
+  }
+  }
 }
+
+/* @media (max-width:360px){
+  .title{
+    font-size: 36px;
+    line-height: 44px;
+  }
+} */
