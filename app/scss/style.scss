@@ -103,6 +103,7 @@
 
 .top{
   height: 100vh;
+  overflow: auto;
   position: relative;
   &__wrapper{
     z-index: 1;
@@ -254,7 +255,7 @@
   }
   &__content{
     max-width: 960px;
-    padding-top: 286px;
+    padding: 285px 0;
     position: relative;
     z-index: 2;
   }

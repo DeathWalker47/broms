@@ -56,6 +56,21 @@ $accent: #8AAEE6;
   }
 }
 
+@media (max-width:1366px){
+  %btn{
+    font-size: 12px;
+    line-height: 15px;
+    padding: 12px 25px;
+  }
+}
+@media (max-width:420px){
+  %btn{
+    font-size: 10px;
+    line-height: 12px;
+    padding: 10px 15px;
+  }
+ 
+}
 
 
 @function max($numbers...) {
