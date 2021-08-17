@@ -53,6 +53,8 @@ $(function(){
     slidesToShow:1,
     slidesToScroll:1,
     speed: 1000,
+    touchMove:false,
+    touchThreshold: false,
   });
 
   $('.images-slider').slick({
@@ -64,6 +66,23 @@ $(function(){
     slidesToScroll:1,
     adaptiveHeight: true,
     variableWidth: true,
+    responsive: [
+        {
+            breakpoint: 1101,
+            settings:{
+                arrows:false,
+                slidesToShow:1,
+                slidesToScroll:1,
+            }
+        },
+        {
+            breakpoint: 341,
+            settings:{
+                arrows:false,
+                dots:true,
+            }
+        },
+    ],
   });
 
 

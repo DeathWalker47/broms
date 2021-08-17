@@ -15,6 +15,16 @@
   }
 }
 
+@media (max-width:1560px){
+  .examples-slider__inner{
+    padding: 180px 20px 180px;
+  }
+  .examples-slider__images {
+    margin-right: 45px;
+    max-width: 800px;
+  }
+}
+
 @media (max-width:1440px){
   .top{
     &__social {
@@ -139,15 +149,97 @@
     padding-right: 0;
     padding-left: 0;
   }
+  .examples-slider__inner{
+    padding: 100px 20px;
+  }
+  .examples-slider__images {
+    margin-right: 30px;
+   /*  max-width: 730px; */
+   max-width: 645px;
+  }
+  .examples-slider .images-slider source, .examples-slider .images-slider img {
+    /* width: 395px;
+    height: 450px; */
+    width: 360px;
+    height: 430px;
+  }
+  .examples-slider .slick-active:not(.slick-current) source, .examples-slider .slick-active:not(.slick-current) img {
+    /* width: 450px;
+    height: 550px; */
+    width: 395px;
+    height: 450px;
+  }
+  .examples-slider .slick-current {
+    transform: translateY(14%);
+  }
+  .examples-slider .slick-current source, .examples-slider .slick-current img {
+    width: 250px;
+    height: 360px;
+  }
+  .slider-examples .slick-arrow {
+    right: 100px;
+    z-index: 4;
+  }
+  
+  .slider-examples .slick-prev {
+    right: 180px;
+  }
   
 }
 
-/* @media (max-width:1140px){
-  .price {
-    padding: 100px 0;
+@media (max-width:1100px){
+  .popup::before{
+    display: none;
+  }
+  .slider-examples .slick-arrow {
+    right: 100px;
+    bottom: 140px;
+  }
+  .slider-examples .slick-prev {
+    right: 180px;
+  }
+  .examples-slider__inner {
+    height: auto;
+  }
+  /* .examples-slider__content {
+    order: -1;
+    max-width: 750px;
+    margin-bottom: 40px;
+  } */
+  /* .examples-slider__images {
+    height: 450px;
+  } */
+  .examples-slider__images {
+    margin-right: 30px;
+    max-width: 440px;
+  }
+  .examples-slider .slick-current {
+    opacity: 1;
+  }
+  .examples-slider .slick-slide::before {
+    display: none;
+  }
+  .examples-slider .images-slider source, .examples-slider .images-slider img {
+    width: 440px;
+    height: 600px;
+  }
+  .examples-slider .slick-current{
+    source,
+    img{
+      width: auto;
+      height: auto;
+    }
+  } 
+  .examples-slider .slick-slide {
+    position: relative;
+    width: 440px;
+    height: 600px;
+  }
+  .examples-slider .slick-current {
+    transform: translateY(0%);
   }
 }
- */
+
 
 @media (max-width:1024px){
   .header {
@@ -212,6 +304,35 @@
     max-width: 100%;
   }
 }
+
+@media (max-width:880px){
+  .examples-slider__images {
+    max-width: 320px;
+  }
+  .examples-slider .images-slider source, .examples-slider .images-slider img {
+    width: 320px;
+    height: 450px;
+  }
+  .examples-slider .slick-slide {
+    position: relative;
+    width: 320px;
+    height: 450px;
+  }
+  .examples-slider__subtitle {
+    margin-bottom: 15px;
+  }
+  .examples-slider__title {
+    margin-bottom: 20px;
+  }
+  .examples-slider__text {
+    margin-bottom: 20px;
+  }
+  .examples-slider__list-item {
+    padding-left: 50px;
+    margin-bottom: 15px;
+  }
+}
+
 
 @media (max-width:768px){
   
@@ -281,6 +402,34 @@
       margin-bottom: 30px;
     }
   }
+  .examples-slider__inner {
+    flex-direction: column;
+  }
+  .examples-slider__content {
+    max-width: 750px;
+    order: -1;
+    margin-bottom: 30px;
+  }
+  .slider-examples .slick-arrow {
+    right: 20px;
+    bottom: 30px;
+  }
+  .slider-examples .slick-prev {
+    right: 100px;
+  }
+  .examples-slider__images {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  /* .examples-slider .images-slider source, .examples-slider .images-slider img {
+    width: 330px;
+    height: 460px;
+  }
+  .examples-slider .slick-slide {
+    position: relative;
+    width: 330px;
+    height: 460px;
+  } */
 }
 
 @media (max-width:540px){
@@ -346,7 +495,9 @@
   .top-slider__popup-video {
     margin-right: 15px;
   }
-
+  .services__content{
+    text-align: left;
+  }
   .services__inner {
     padding: 60px 0;
   }
@@ -419,8 +570,38 @@
   .contact-form {
     margin-top: 30px;
   }
-  
+  .examples-slider__inner {
+    padding: 60px 15px;
+  }
+  .slider-examples .slick-arrow {
+    bottom: auto;
+    top: 30px;
+    width: 50px;
+  }
+  .slider-examples .slick-prev {
+    right: 80px;
+  }
+  .examples::before{
+    bottom: 94%;
+    top: 0;
+  }
 }
+@media (max-width:390px){
+  .examples-slider{
+    &__list-item {
+      width: 160px;
+    }
+    &__list-title {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &__list-descr {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+
 
 @media (max-width:360px){
   .top-slider__title {
@@ -428,46 +609,34 @@
     line-height: 45px;
     margin-bottom: 15px;
   }
-  .services__text{
-    font-size: 16px;
-    line-height: 26px;
-    margin-bottom: 20px;
-  }
-  .services__subtitle {
+  .services__subtitle,
+  .popup__subtitle,
+  .examples-slider__subtitle{
     margin-bottom: 10px;
   }
-  .services__title {
+  .services__title,
+  .popup__title,
+  .contact__title,
+  .price__title,
+  .examples-slider__title {
     margin-bottom: 15px;
   }
   .services__content {
     margin: 0 0 30px;
   }
-  .popup__subtitle {
-    margin-bottom: 10px;
-  }
-  .popup__title {
-    margin-bottom: 15px;
-  }
-  .price__title {
-    margin-bottom: 20px;
-  }
   .price ul.rate {
     padding-left: 25px;
   }
-  .rate__item{
+  .rate__item,
+  .contact__text,
+  .footer__text,
+  .services__text,
+  .examples-slider__text{
     font-size: 16px;
     line-height: 26px;
   }
-  .contact__title {
-    margin-bottom: 15px;
-  }
-  .contact__text{
-    font-size: 16px;
-    line-height: 26px;
-  }
-  .footer__text{
-    font-size: 16px;
-    line-height: 26px;
+  .footer__text,
+  .services__text{
     margin-bottom: 20px;
   }  
 }
@@ -483,5 +652,41 @@
   .top-slider__title {
     font-size: 25px;
     line-height: 34px;
+  }
+  .examples::after {
+    top: 96%;
+    bottom: 8px;
+  }
+  .examples-slider{
+    .slick-dots{
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li{
+        margin: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        button{
+          border: none;
+          font-size: 1px;
+          background-color: transparent;
+          padding: 0;
+          width: 5px;
+          height: 5px;
+          background-color: $default;
+          border-radius: 50%;
+        }
+      }
+      li.slick-active{
+        button{
+          width: 10px;
+          height: 10px;
+          background-color: $accent;
+        }
+      }
+    }
   }
 }
