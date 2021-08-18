@@ -1756,6 +1756,7 @@
   &__items{
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     z-index: 1;
   }
@@ -1805,11 +1806,13 @@
     font-size: 16px;
     line-height: 27px;
   }
-  &__bottom{
+  /* &__bottom{
     display: flex;
-  }
+  } */
   &__bottom{
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
     &::before,
   &::after{
     content: '';
