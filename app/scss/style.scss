@@ -857,7 +857,8 @@
 }
 
 .team-slider{
-  margin: 0 200px;
+  max-width: 1520px;
+  margin: 0 auto;
   &__item{
     width: 360px;
     width: 100%;
@@ -1036,6 +1037,7 @@
 .reviews-slider{
   max-width: 650px;//пока так,пока не уменьшил размер иконок.а так 460пх
   margin: 0 auto;
+  height: 155px;//Чтобы блок не скакал изза перепада высот
   &__item{
     width: 150px;
     opacity: .3;
