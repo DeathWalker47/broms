@@ -38,8 +38,6 @@ function scripts() {
     'node_modules/aos/dist/aos.js',
     'node_modules/jquery-circle-progress/dist/circle-progress.js',
     'node_modules/lightgallery.js/dist/js/lightgallery.js',
-    /* 'node_modules/donutty/dist/donutty-jquery.js', */
-    /* 'app/js/circlos.js', */
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
