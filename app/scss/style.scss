@@ -237,6 +237,7 @@
     background-position: center;
     min-height: 100vh;
     position: relative;
+    z-index: 1;
     &::before{
       position: absolute;
       content: '';
@@ -249,6 +250,7 @@
       background: #0649CA;
       opacity: .15;
       filter: blur(250px);
+      z-index: -1;
     }
     &::after{
       position: absolute;
