@@ -1,5 +1,20 @@
 $(function(){
 
+    $('.header__menu-btn').on('click', function(){
+        $('.menu__list').toggleClass('menu__list--active');
+        $('.top').toggleClass('top--active');
+    });
+    $('.top, .menu__list-link').on('click', function(){
+        $('.menu__list').removeClass('menu__list--active');
+        $('.top').removeClass('top--active');
+        $('.top').removeClass('top--active');
+    });
+
+    $('.menu__dropdawn').on('click', function(){
+        $('.menu__dropdawn').toggleClass('menu__dropdawn--active');
+        $('.dropdawn').toggleClass('dropdawn--active');
+    });
+
     $('.booking-calendar__input').on('click', function(){
         $('.popup-overlay').fadeIn();
         $('.booking-box').fadeIn();

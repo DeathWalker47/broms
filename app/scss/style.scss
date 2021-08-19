@@ -28,6 +28,7 @@
     padding: 0;
     background-color: transparent;
     border: none;
+    z-index: 1;
   }
   &__btn-contact{
     @extend %btn;
@@ -43,11 +44,16 @@
   }
   &__dropdawn{
     position: relative;
-    &:hover{
+    transition: all .3s linear;
+    &--active{
+    transition: all .3s linear;
       .dropdawn{
         opacity: 1;
         top: 100%;
         visibility: visible;
+      }
+      .menu__dropdawn-link::before{
+        transform: rotate(0deg);
       }
     }
   }
@@ -81,6 +87,7 @@
       right: 4px;
       width: 14px;
       height: 14px;
+      transform: rotate(180deg);
       background-image: url('../images/decor/dropdawn.svg');
     }
   }

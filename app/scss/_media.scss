@@ -342,6 +342,25 @@
 
 
 @media (max-width:1024px){
+  .top{
+    transition: transform .5s ease-out;
+    &--active{
+      transition: transform .5s ease-out;
+      transform: translateX(60%);
+      position: relative;
+      &::before{
+      transition: transform .5s ease-out;
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, .5);
+      }
+    }
+  }
   .header {
     top: 0;
     left: 0;
@@ -349,14 +368,54 @@
     padding: 30px;
     background-color: rgba(0, 0, 0, .3);
   }
-  .menu__list{
+  ul.menu__list{
     position: absolute;
-    right: 0;
     left: 0;
     top: 0;
     flex-direction: column;
-    text-align: center;
-    transform: translateY(-1000%);
+    transform: translateX(-300%);
+    background-color: $bg;
+    right: 40%;
+    height: 100vh;
+    overflow: auto;
+    padding-top: 100px;
+    padding-left: 50px;
+    transition: transform 1s ease-out;
+    &--active{
+      transition: transform .5s ease-out;
+      transform: translateX(0%);
+    }
+  }
+  .menu__list-item {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  .menu__dropdawn{
+    &--active{
+      margin-bottom: 140px;
+      .dropdawn{
+        top: 120%;
+      }
+    }
+  }
+  .dropdawn{
+    left: 12%;
+    .menu__dropdawn-item{
+      margin-bottom: 5px;
+      &--none{
+        display: none;
+      }
+    }
+  }
+  .menu .menu__dropdawn-error{
+    display: block;
+  }
+  .menu__list-link, 
+  .menu__list-home, 
+  .menu__link-block, 
+  .menu__dropdawn-link {
+    font-size: 20px;
+    line-height: 32px;
   }
   .top-slider{
     &__title {
@@ -650,6 +709,14 @@
 }
 
 @media (max-width:540px){
+  .menu__list-link{
+    display: block;
+  }
+  ul.menu__list{
+    justify-content: center;
+    padding-top: 0;
+    padding-left: 25px;
+  }
   .top .slick-dots li,
   .top .slick-dots .slick-active {
     font-size: 0;
@@ -773,9 +840,43 @@
       }
     }
   }
+  .error{
+    padding: 60px 0;
+    &__title {
+      font-size: 100px;
+      line-height: 120px;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @media (min-width: 550px) and (max-width: 890px) and (orientation: landscape){
+  .menu__list-item {
+    margin-bottom: 10px;
+  }
+  .menu__dropdawn--active {
+    margin-bottom: 100px;
+    .dropdawn{
+      top: 90%;
+      left: 14%;
+    }
+  }
+  .dropdawn--active{
+    .menu__dropdawn-item{
+      margin-bottom: 0;
+    }
+    .menu__dropdawn-link{
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  .menu__list-link, 
+  .menu__list-home, 
+  .menu__link-block, 
+  .menu__dropdawn-link {
+    font-size: 15px;
+    line-height: 21px;
+  }
   .top{
     overflow: auto;
   }
@@ -797,6 +898,36 @@
 
 
 @media (max-width:420px){
+  .menu__list-item {
+    margin-bottom: 20px;
+  }
+  .menu__dropdawn{
+    &--active{
+      margin-bottom: 100px;
+      .dropdawn{
+        top: 90%;
+      }
+    }
+  }
+  .dropdawn{
+    left: 15%;
+    top: 100%;
+    .menu__dropdawn-item{
+      margin-bottom: 0;
+    }
+    .menu__dropdawn-link{
+      font-size: 12px;
+      line-height: 22px;
+      padding-right: 0;
+    }
+  }
+  .menu__list-link, 
+  .menu__list-home, 
+  .menu__link-block,
+  .menu__dropdawn-link{
+    font-size: 14px;
+    line-height: 26px;
+  }
   .header__menu-btn {
     display: inline-block;
     margin-right: 20px;
@@ -1018,6 +1149,18 @@
     line-height: 32px;
     margin-bottom: 30px;
   }
+
+  .error{
+    &__title {
+      font-size: 80px;
+      line-height: 90px;
+    }
+    &__subtitle {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @media (max-width:390px){
@@ -1066,7 +1209,8 @@
   .about-us__title,
   .event__title,
   .team__title,
-  .reviews-block__title {
+  .reviews-block__title,
+  .error__title {
     margin-bottom: 15px;
   }
   .team-slider__item picture source, 
@@ -1122,7 +1266,8 @@
   .skills__text,
   .about-us__text,
   .event__text,
-  .reviews-block__text{
+  .reviews-block__text,
+  .error__text{
     font-size: 16px;
     line-height: 26px;
   }
@@ -1224,7 +1369,15 @@
   .reviews-form__textarea{
     padding: 10px 15px;
   }
-  
+  .error__title{
+    font-size: 70px;
+    line-height: 80px;
+  }
+  .error__subtitle {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 15px;
+  }
 }
 
 
