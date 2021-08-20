@@ -169,7 +169,7 @@ $(function(){
 
 });
 
-
+/* 
 
 
 $.easing.circleProgressEasing = function(x, t, b, c, d) {
@@ -295,7 +295,7 @@ $.fn.circleProgress = function(options) {
           );
       }
   });
-};
+}; */
 
 
 $(document).ready(function ($) {
