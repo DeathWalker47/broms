@@ -39,6 +39,8 @@ $(function(){
     infinite: true,
     dots: true,
     speed: 1000,
+    touchMove:false,
+    touchThreshold: false,
     customPaging : function(slider, i) {
       var thumb = jQuery(slider.$slides[i]).data();
       return '<a>'+('0'+(i+1)).slice(-2)+'</a>'; 
