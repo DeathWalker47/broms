@@ -47,14 +47,7 @@ $(function(){
 
     prevArrow: '<button type="button" class="slick-prev"><img src="images/decor/left-arrow.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="images/decor/right-arrow.svg" alt=""></button>',
-    /* responsive: [
-        {
-            breakpoint: 541,
-            settings:{
-                dots:false,
-            }
-        }
-    ], */
+  
 });
 
   AOS.init();

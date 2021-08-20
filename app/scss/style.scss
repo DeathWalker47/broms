@@ -110,7 +110,6 @@
 
 .top{
   height: 100vh;
-  /* overflow: auto; */
   position: relative;
   &__wrapper{
     z-index: 1;
@@ -120,16 +119,6 @@
     flex-direction: column;
     align-items: center;
   }
- /*  &::before{
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    background-image: url('../images/decor/blur.png');
-    width: 1000px;
-    height: 1000px;
-    border-radius: 50%;
-  } */
   &__social{
     position: absolute;
     bottom: 80px;
@@ -243,8 +232,6 @@
       content: '';
       top: 0;
       left: 0;
-      /* background-image: url('../images/decor/blur.png'); */
-      /* border-radius: 50%; */
       width: 1000px;
       height: 1000px;
       background: #0649CA;
@@ -296,26 +283,6 @@
 
    
 }
-/* .deg{
-  animation: deg 15s linear  infinite ;
-  transform-origin: center;
-}
-@keyframes deg{
-  to{
-    transform: rotate(360deg);
-  }
-} 
-.abc{
-  animation: abc 15s linear  infinite ;
-  transform-origin: center;
-}
-
-@keyframes abc{
-  to{
-    transform: rotate(360deg);
-  }
-}  */
-
 
 .abc{
   --animate-duration: 3.5s;
@@ -489,13 +456,10 @@
   }
   .images-slider{
     position: relative;
-    /* transition: all .3s linear; */
     source,
     img{
       width: 440px;
       height: 500px;
-      /* width: 585px;
-      height: 700px; */
       object-fit: cover;
       transition: all .4s linear; //либо 3 либо 4 если скорость 500
     }
@@ -525,10 +489,7 @@
     img{
       width: 290px;
       height: 500px;
-      /* width: 585px;
-      height: 700px; */
       object-fit: cover;
-     /*  transform: translateY(20%); */
       transition: all .6s linear;
     }
   }
@@ -685,8 +646,6 @@
       top: 0;
       left: 0;
       z-index: -1;
-     /*  background-image: url('../images/decor/litle-blur.png');
-      background-repeat: no-repeat; */
       width: 500px;
       height: 500px;
       background: #0649CA;
@@ -872,7 +831,6 @@
     width: 360px;
     width: 100%;
     position: relative;
-    /* padding: 0 15px; */
     z-index: 1;
     &::before{
       position: absolute;
@@ -986,9 +944,6 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* @supports (background-image: url('../images/team-popup.webp')){
-      background: url('../images/team-popup.webp') no-repeat center/cover;
-    } */
     position: relative;
     &::before{
       content: '';
@@ -1007,7 +962,6 @@
   padding: 100px 0;
   z-index: 1;
   background-color: rgba(23, 24, 24, 1);
- /*  margin-bottom: 120px; */
   min-height: 600px;
   position: relative;
   &::before,
@@ -1427,11 +1381,6 @@
     max-width: 430px;
     width: 100%;
   }
-  /* &__textarea{
-    height: 100px;
-    resize: none;
-    border-radius: 25px;
-  } */
   &__btn{
     @extend %btn;
   }
@@ -1734,7 +1683,6 @@
   }
 }
 
-
 .reviews{
   padding: 250px 0 200px;
   z-index: 1;
@@ -1816,9 +1764,6 @@
     font-size: 16px;
     line-height: 27px;
   }
-  /* &__bottom{
-    display: flex;
-  } */
   &__bottom{
     position: relative;
     display: flex;
@@ -1884,7 +1829,7 @@
     width: 330px;
     height: 365px;
     object-fit: cover;
-    filter: grayscale(100%); //чб
+    filter: grayscale(100%); 
   }
   &__box{
     position: absolute;
@@ -2160,7 +2105,6 @@
 
 .error{
   padding: 60px 0 230px;
-  /* background-color: #1C2127; */
   z-index: 1;
   position: relative;
   &::before{
