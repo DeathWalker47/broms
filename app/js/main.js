@@ -50,8 +50,6 @@ $(function(){
   
 });
 
-  AOS.init();
-
   $('.slider-examples').slick({
     infinite: true,
     cssEase: 'linear',
@@ -169,8 +167,8 @@ $(function(){
 
 });
 
-/* 
 
+/* 
 
 $.easing.circleProgressEasing = function(x, t, b, c, d) {
   if ((t /= d / 2) < 1)
@@ -295,9 +293,9 @@ $.fn.circleProgress = function(options) {
           );
       }
   });
-}; */
+};
 
-
+ */
 $(document).ready(function ($) {
   function animateElements() {
       $('.progressbar').each(function () {
@@ -320,7 +318,6 @@ $(document).ready(function ($) {
                       duration: 2000,
                       easing: 'linear'
                     },
-                    
               }).on('circle-animation-progress', function (event, progress, stepValue) {
                   $(this).find('div').text(String(stepValue.toFixed(2)).substr(2) + '%');
               }).stop();
