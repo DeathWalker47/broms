@@ -296,7 +296,7 @@ $.fn.circleProgress = function(options) {
 };
 
  */
-$(document).ready(function ($) {
+/* $(document).ready(function ($) {
   function animateElements() {
       $('.progressbar').each(function () {
           var elementPos = $(this).offset().top;
@@ -327,4 +327,4 @@ $(document).ready(function ($) {
 
   animateElements();
   $(window).scroll(animateElements);
-});
+}); */
