@@ -121,7 +121,7 @@ $(function(){
     slidesToScroll:1,
     fade: true,
     autoplay: true,
-    adaptiveHeight: true,
+    /* adaptiveHeight: true, */
     autoplaySpeed: 5000,
     asNavFor: '.reviews-slider'
   });
