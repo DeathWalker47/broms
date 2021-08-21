@@ -2,12 +2,9 @@ $(function(){
 
     $('.header__menu-btn').on('click', function(){
         $('.menu__list').toggleClass('menu__list--active');
-        $('.top').toggleClass('top--active');
     });
     $('.top, .menu__list-link').on('click', function(){
         $('.menu__list').removeClass('menu__list--active');
-        $('.top').removeClass('top--active');
-        $('.top').removeClass('top--active');
     });
 
     $('.menu__dropdawn').on('click', function(){
@@ -35,7 +32,7 @@ $(function(){
     });
         
 
-  $('.top-slider').slick({
+ /*  $('.top-slider').slick({
     infinite: true,
     dots: true,
     speed: 1000,
@@ -50,20 +47,9 @@ $(function(){
     prevArrow: '<button type="button" class="slick-prev"><img src="images/decor/left-arrow.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="images/decor/right-arrow.svg" alt=""></button>',
   
-});
+}); */
 
-  $('.slider-examples').slick({
-    infinite: true,
-    cssEase: 'linear',
-    /* arrows: false, */
-    prevArrow: '<button type="button" class="slick-prev"><img src="images/decor/left-litlearrow.svg" alt=""></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="images/decor/right-litlearrow.svg" alt=""></button>',
-    slidesToShow:1,
-    slidesToScroll:1,
-    speed: 1000,
-    touchMove:false,
-    touchThreshold: false,
-  });
+  
 
   $('.images-slider').slick({
     infinite: true,

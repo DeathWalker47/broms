@@ -17,6 +17,7 @@
   }
   &__logo{
     display: flex;
+    z-index: 1;
   }
   &__navigation{
     display: flex;
@@ -28,7 +29,6 @@
     padding: 0;
     background-color: transparent;
     border: none;
-    z-index: 1;
   }
   &__btn-contact{
     @extend %btn;
@@ -393,23 +393,6 @@
   }
 }
 
-.slider-examples{
-  overflow: hidden;
-  .slick-arrow {
-    position: absolute;
-    right: 420px;
-    bottom: 80px;
-    border: none;
-    background-color: transparent;
-    opacity: .5;
-    cursor: pointer;
-    z-index: 5;
-  }
-  .slick-prev{
-    z-index: 4;
-    right: 500px;
-  }
-}
 
 
 .examples-slider{
