@@ -120,9 +120,8 @@ $(function(){
     slidesToShow:1,
     slidesToScroll:1,
     fade: true,
-    autoplay: true,
-    /* adaptiveHeight: true, */
-    autoplaySpeed: 5000,
+    //autoplay: true,
+    //autoplaySpeed: 5000,
     asNavFor: '.reviews-slider'
   });
 
@@ -153,7 +152,7 @@ $(function(){
 
 });
 
-/* $(document).ready(function ($) {
+$(document).ready(function ($) {
   function animateElements() {
       $('.progressbar').each(function () {
           var elementPos = $(this).offset().top;
@@ -184,4 +183,4 @@ $(function(){
 
   animateElements();
   $(window).scroll(animateElements);
-}); */
+});

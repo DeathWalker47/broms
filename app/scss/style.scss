@@ -255,6 +255,7 @@
     background-position: center;
     min-height: 100vh;
     position: relative;
+    overflow: hidden;
     /* z-index: 1; */
     &::before{
       position: absolute;
@@ -959,8 +960,7 @@
   margin: 0 auto;
   height: 155px;//Чтобы блок не скакал изза перепада высот
   &__item{
-    width: 150px;
-    opacity: .3;
+    /* width: 150px; */
     position: relative;
     transition: all .3s linear;
     margin-top: 15px;
@@ -972,7 +972,8 @@
     height: 70px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 10px;
+    opacity: .3;
+    margin: 10px  auto 10px;
     transition: all .3s linear;
   }
   &__name{
@@ -983,6 +984,7 @@
     @extend %montserrat-700;
     opacity: 0;
     max-width: 100px;
+    margin: 0 auto;
     transition: all .3s linear;
   }
   .slick-slide,
@@ -998,11 +1000,11 @@
     .reviews-slider__img{
       width: 100px;
       height: 100px;
+      opacity: 1;
       margin: 0 auto 10px;
     }
     .reviews-slider__name{
       opacity: 1;
-      
     }
   }
   .slick-arrow{
@@ -1137,10 +1139,10 @@
 
 .event{
   padding-bottom: 160px;
+  background-image: url('../images/event-bg.jpg');
   @supports (background-image: url('../images/event-bg.webp')){
     background: url('../images/event-bg.webp') no-repeat  88% 24%/auto;
   }
-  background-image: url('../images/event-bg.jpg');
   background-repeat: no-repeat;
   background-position:  88% 24%;
   background-size: auto;
