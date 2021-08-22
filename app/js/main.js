@@ -85,7 +85,7 @@ $(function(){
     prevArrow: '<button type="button" class="slick-prev"><img src="images/decor/left-litlearrow.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="images/decor/right-litlearrow.svg" alt=""></button>',
     slidesToShow:4,
-    slidesToScroll:2,
+    slidesToScroll:4,
     speed: 1000,
     responsive: [
         {
@@ -127,6 +127,7 @@ $(function(){
 
   $('.reviews-slider').slick({
     infinite: true,
+    lazyLoad: 'ondemand',
     speed: 600,//400
     cssEase: 'linear',
     arrows: false,
@@ -148,10 +149,10 @@ $(function(){
   });
 
 
-  lightGallery(document.getElementById('gallery'));
-
+  
 });
 
+lightGallery(document.getElementById('gallery'));
 $(document).ready(function ($) {
   function animateElements() {
       $('.progressbar').each(function () {
@@ -184,3 +185,5 @@ $(document).ready(function ($) {
   animateElements();
   $(window).scroll(animateElements);
 });
+
+    lazyload();

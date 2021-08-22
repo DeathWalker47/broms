@@ -302,7 +302,7 @@
   &__text{
     margin-bottom: 30px;
   }
-  &__link{
+  &__btn{
     @extend %btn;
   }
 }
@@ -314,6 +314,9 @@
   &__item{
     width: 310px;
     margin-left: 20px;
+    background-image: url('../images/loader.gif');
+    background-repeat: no-repeat;
+    background-position: center;
   }
   &__link{
     source,
@@ -435,7 +438,7 @@
         top: 0;
         right: 0;
         left: 0;
-        bottom: 9px;
+        bottom: 0;
         background: rgba(28, 33, 39, 0.3);
         transition: all .3s linear;
       }
@@ -699,6 +702,10 @@
   }
   &__images{
     width: 585px;
+    background-image: url('../images/loader.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
     picture{
       source,
       img{
@@ -809,7 +816,6 @@
       }
     }
   }
-
   .slick-arrow{
     position: absolute;
     background-color: transparent;
