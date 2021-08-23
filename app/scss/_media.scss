@@ -1153,11 +1153,8 @@
   }
 
   .header__menu-btn {
-    display: inline-block;
     margin-right: 20px;
-    padding: 0;
-    background-color: transparent;
-    border: none;
+    pointer-events: all;
   }
 
   .top .slick-arrow {

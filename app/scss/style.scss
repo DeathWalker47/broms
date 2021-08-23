@@ -29,6 +29,7 @@
     padding: 0;
     background-color: transparent;
     border: none;
+    pointer-events: none;
   }
   &__btn-contact{
     @extend %btn;
@@ -70,9 +71,6 @@
     opacity: 0.5;
     @extend %montserrat-800;
     transition: all .3s linear;
-    &:hover{
-      opacity: 1;
-    }
     &--active{
       opacity: 1;
     }
