@@ -1,9 +1,11 @@
 $(function () {
 
     $('.header__menu-btn').on('click', function () {
+        $('body').toggleClass('hidden')
         $('.menu__list').toggleClass('menu__list--active');
     });
     $('.top, .menu__list-link').on('click', function () {
+        $('body').removeClass('hidden')
         $('.menu__list').removeClass('menu__list--active');
     });
 
@@ -33,26 +35,6 @@ $(function () {
         }, 1500);
     });
 
-
-    /*  $('.top-slider').slick({
-    infinite: true,
-    dots: true,
-    speed: 1000,
-    touchMove:false,
-    touchThreshold: false,
-    customPaging : function(slider, i) {
-      var thumb = jQuery(slider.$slides[i]).data();
-      return '<a>'+('0'+(i+1)).slice(-2)+'</a>'; 
-  },
-  cssEase: 'linear',
-
-    prevArrow: '<button type="button" class="slick-prev"><img src="images/decor/left-arrow.svg" alt=""></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="images/decor/right-arrow.svg" alt=""></button>',
-  
-}); */
-
-
-
     $('.images-slider').slick({
         infinite: true,
         speed: 500, //400
@@ -78,7 +60,6 @@ $(function () {
             },
         ],
     });
-
 
     $('.team-slider').slick({
         infinite: true,
@@ -121,8 +102,6 @@ $(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
-        //autoplay: true,
-        //autoplaySpeed: 5000,
         asNavFor: '.reviews-slider'
     });
 
@@ -134,7 +113,6 @@ $(function () {
         arrows: false,
         slidesToShow: 5,
         slidesToScroll: 1,
-        /* adaptiveHeight: true, */
         variableWidth: true,
         centerMode: true,
         asNavFor: '.reviews-block__text-slider',

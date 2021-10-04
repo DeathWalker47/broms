@@ -1285,22 +1285,20 @@
       margin-bottom: 30px;
     }
 
-    &__statistic {
-      justify-content: center;
-    }
-
     &__statistic-item {
       margin-bottom: 20px;
+      width: 100%;
     }
 
     &__statistic-number {
       margin-right: 10px;
-      font-size: 30px;
+      font-size: 35px;
       line-height: 40px;
     }
 
     &__statistic-descr {
       line-height: 22px;
+      font-size: 18px;
     }
 
     &__popup {
@@ -1373,7 +1371,6 @@
     }
 
     &__box {
-      justify-content: center;
       text-align: center;
     }
 
@@ -1391,6 +1388,7 @@
 
   .contact-form {
     margin-top: 30px;
+    text-align: left;
   }
 
   .examples-slider__inner {

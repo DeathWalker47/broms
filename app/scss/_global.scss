@@ -13,6 +13,10 @@ body{
   background-color: $bg;
 }
 
+body.hidden{
+  overflow: hidden;
+}
+
 .wrapper{
   display: flex;
   flex-direction: column;
